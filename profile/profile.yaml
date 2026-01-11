@@ -47,18 +47,18 @@ skills:
 # List of Jarvis projects
 jarvis_projects:
   - name: "Linux Cluster Resource Monitoring App"
-    git_url: "https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/develop/linux_sql"
+    git_url: "/linux_sql"
     # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
     # Please include the following keywords: CentOS, Bash/Shell, docker, RDBMS/SQL/Postgresql, crontab, data analytics
     description: Developed a Linux cluster monitoring solution using Bash scripts and PostgreSQL to track hardware specifications and real-time resource usage across Rocky Linux servers. Implemented Docker containerization for PostgreSQL database, automated data collection via crontab, and designed SQL queries for resource analytics. Collected CPU, memory, and disk metrics every minute to identify low-memory servers and optimize capacity planning. Applied GitFlow version control and deployed on Google Cloud Platform for the Jarvis LCA team.
   - name: "Club Management Database System"
-    git_url: "https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/develop/sql"
+    git_url: "/sql"
     description: Built a PostgreSQL database system with normalized schema design for managing club members, facility bookings, and usage analytics. Implemented complex SQL queries including joins, aggregate functions, window functions, CTEs, and subqueries for business intelligence. Applied database design principles with foreign key relationships, data integrity constraints, and optimized queries for facility usage patterns and member activity tracking.
   - name: "Java Grep Application"
-    git_url: "https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/develop/core_java/grep"
+    git_url: "/core_java/grep"
     description: Built a Java-based command-line grep application to recursively search directory trees for regex pattern matches and output results to a file. Implemented file system traversal, buffered file I/O, and regex matching using core Java APIs. Applied object-oriented design principles with interface-based abstraction, exception handling, and logging via SLF4J and Log4j. Designed the application for scalability and maintainability, supporting large directory structures and automated execution in Linux environments.
   - name: "London Gift Shop Customer Analytics"
-    git_url: "https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/develop/python_data_analytics"
+    git_url: "/python_data_analytics"
     description: Developed a customer analytics proof-of-concept for a UK-based e-commerce retailer using Python, Jupyter Notebook, Pandas, and NumPy to analyze transactional retail data and customer purchasing behavior. Performed data cleaning, validation, and feature engineering to transform raw invoice-level data into customer-level insights. Implemented RFM (Recency, Frequency, Monetary) analysis and customer segmentation to identify high-value, loyal, and at-risk customers. Generated monthly user activity metrics and business-ready summaries to support targeted marketing campaigns and customer retention strategies for the LGS marketing team.
 
 # List of personal or academic projects
