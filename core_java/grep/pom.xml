@@ -44,8 +44,8 @@
                                     <mainClass>ca.jrvs.apps.grep.JavaGrepLambdaImp</mainClass>
                                 </transformer>
                             </transformers>
-                            <finalName>grep-demo</finalName>
-                            <outputDirectory>${project.basedir}</outputDirectory>
+                            <finalName>grep</finalName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
