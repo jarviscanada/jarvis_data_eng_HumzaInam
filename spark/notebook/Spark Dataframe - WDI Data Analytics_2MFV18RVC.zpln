@@ -41,7 +41,50 @@
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
       "focus": true,
-      "$$hashKey": "object:18889"
+      "$$hashKey": "object:207"
+    },
+    {
+      "text": "%md\n### Author: Humza Inam",
+      "user": "anonymous",
+      "dateUpdated": "2026-01-28T16:08:46+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1769616515483_731316468",
+      "id": "paragraph_1769616515483_731316468",
+      "dateCreated": "2026-01-28T16:08:35+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5598",
+      "dateFinished": "2026-01-28T16:08:50+0000",
+      "dateStarted": "2026-01-28T16:08:46+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Author: Humza Inam</h3>\n\n</div>"
+          }
+        ]
+      }
     },
     {
       "text": "%spark\n//Scala SparkSession\nspark",
@@ -83,7 +126,7 @@
       "dateStarted": "2026-01-27T21:13:12+0000",
       "dateFinished": "2026-01-27T21:13:12+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18890"
+      "$$hashKey": "object:208"
     },
     {
       "text": "%spark.pyspark\n#PySpark SparkSession\nspark",
@@ -125,7 +168,7 @@
       "dateStarted": "2026-01-27T21:13:15+0000",
       "dateFinished": "2026-01-27T21:13:15+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18891"
+      "$$hashKey": "object:209"
     },
     {
       "text": "%md \n\n# Show DataFrame\n\n`df.show()` is the Spark native API that displays data but it's not pretty. \n\n`z.show(df)` is a Zeppelin build-in feature that allows you to show a df result in a pretty way",
@@ -167,7 +210,7 @@
       "id": "20200924-193529_188023260",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18892"
+      "$$hashKey": "object:210"
     },
     {
       "text": "%spark.pyspark\nwdiDF = spark.table(\"wdi_csv_parquet\")\nwdiDF.show(10)\n",
@@ -240,7 +283,7 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=0",
-              "$$hashKey": "object:19287"
+              "$$hashKey": "object:853"
             }
           ],
           "interpreterSettingId": "spark"
@@ -253,7 +296,7 @@
       "dateStarted": "2026-01-27T21:12:38+0000",
       "dateFinished": "2026-01-27T21:12:44+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18895"
+      "$$hashKey": "object:211"
     },
     {
       "text": "%md \n\n# Spark SQL vs Dataframe\n\n`%sql` is the Spark SQL interpreter\n\n`%spark.pyspark` is the PySpark interpreter\n\n`%spark` is the Spark Scala interpreter",
@@ -295,7 +338,7 @@
       "id": "20200924-194044_351534117",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18896"
+      "$$hashKey": "object:212"
     },
     {
       "text": "%sql\n\nselect count(1) from wdi_csv_parquet",
@@ -366,11 +409,11 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=1",
-              "$$hashKey": "object:19335"
+              "$$hashKey": "object:939"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=2",
-              "$$hashKey": "object:19336"
+              "$$hashKey": "object:940"
             }
           ],
           "interpreterSettingId": "spark"
@@ -383,7 +426,7 @@
       "dateStarted": "2026-01-27T21:13:26+0000",
       "dateFinished": "2026-01-27T21:13:28+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18897"
+      "$$hashKey": "object:213"
     },
     {
       "text": "%spark.pyspark\n\n#Read Hive data to a df (this is lazy)\nwdi_df = spark.sql(\"SELECT * from wdi_csv_parquet\")\n#Persist df in memory for fast futuer access\nwdi_df = wdi_df.cache()\nwdi_df.printSchema()\n\n#Spark action is eager\nz.show(wdi_df.count())",
@@ -426,15 +469,15 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=3",
-              "$$hashKey": "object:19355"
+              "$$hashKey": "object:990"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=4",
-              "$$hashKey": "object:19356"
+              "$$hashKey": "object:991"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=5",
-              "$$hashKey": "object:19357"
+              "$$hashKey": "object:992"
             }
           ],
           "interpreterSettingId": "spark"
@@ -447,7 +490,7 @@
       "dateStarted": "2026-01-27T21:13:37+0000",
       "dateFinished": "2026-01-27T21:14:20+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18898"
+      "$$hashKey": "object:214"
     },
     {
       "text": "%md \n\n# Show Historical GDP for Canada\n\n- Re-write the hive query (left cell) using PySpark df",
@@ -489,7 +532,7 @@
       "id": "20200924-194555_411298048",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18899"
+      "$$hashKey": "object:215"
     },
     {
       "text": "%sql\nSELECT year, IndicatorValue as GDP\nFROM wdi_csv_parquet\nWHERE indicatorCode = 'NY.GDP.MKTP.KD.ZG' and countryName = 'Canada'\nORDER BY year\n",
@@ -583,7 +626,7 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=16",
-              "$$hashKey": "object:22296"
+              "$$hashKey": "object:1086"
             }
           ],
           "interpreterSettingId": "spark"
@@ -596,7 +639,7 @@
       "dateStarted": "2026-01-27T21:23:59+0000",
       "dateFinished": "2026-01-27T21:24:00+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18900"
+      "$$hashKey": "object:216"
     },
     {
       "text": "%spark.pyspark\r\n\r\nfrom pyspark.sql.functions import col\r\n\r\n# Load the Hive table\r\nwdiDF = spark.table(\"wdi_csv_parquet\")\r\n\r\n# Filter for Canada GDP, select year and GDP, order by year\r\ncanada_gdp = (\r\n    wdiDF\r\n    .filter((wdiDF['indicatorcode'] == 'NY.GDP.MKTP.KD.ZG') & (wdiDF['countryname'] == 'Canada'))\r\n    .select('year', wdiDF['indicatorvalue'].alias('GDP'))\r\n    .orderBy('year')\r\n)\r\n\r\nz.show(canada_gdp)\r\n",
@@ -696,7 +739,7 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=22",
-              "$$hashKey": "object:22926"
+              "$$hashKey": "object:1132"
             }
           ],
           "interpreterSettingId": "spark"
@@ -709,7 +752,7 @@
       "dateStarted": "2026-01-27T21:56:27+0000",
       "dateFinished": "2026-01-27T21:56:28+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18901"
+      "$$hashKey": "object:217"
     },
     {
       "text": "%md \n\n# Show GDP for Each County and Sort By Year\n\n- Re-write the hive query (left cell) using PySpark df  \n    - hint: you can create multiple DFs ",
@@ -751,7 +794,7 @@
       "id": "20200924-195213_2033277524",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18902"
+      "$$hashKey": "object:218"
     },
     {
       "text": "%sql\nSELECT countryname,\n       year,\n       indicatorcode,\n       indicatorvalue\nFROM wdi_csv_parquet\nWHERE indicatorcode = 'NY.GDP.MKTP.KD.ZG'\nDISTRIBUTE BY countryname\nSORT BY countryname, year\n",
@@ -887,11 +930,11 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=14",
-              "$$hashKey": "object:19474"
+              "$$hashKey": "object:1218"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=15",
-              "$$hashKey": "object:19475"
+              "$$hashKey": "object:1219"
             }
           ],
           "interpreterSettingId": "spark"
@@ -904,7 +947,7 @@
       "dateStarted": "2026-01-27T21:23:47+0000",
       "dateFinished": "2026-01-27T21:23:50+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18903"
+      "$$hashKey": "object:219"
     },
     {
       "text": "%spark.pyspark\n\nfrom pyspark.sql.functions import col\n\n# Load table\nwdi_df = spark.table(\"wdi_csv_parquet\")\n\n# Filter + select\nwdi_gdp_df = (\n    wdi_df\n    .filter(col(\"indicatorCode\") == \"NY.GDP.MKTP.KD.ZG\")\n    .select(\n        col(\"countryName\"),\n        col(\"year\"),\n        col(\"indicatorCode\"),\n        col(\"indicatorValue\")\n    )\n    # DISTRIBUTE BY countryname\n    .repartition(col(\"countryName\"))\n    # SORT BY countryname, year (within each partition)\n    .sortWithinPartitions(\"countryName\", \"year\")\n)\n\n# Display result\nz.show(wdi_gdp_df)\n",
@@ -1037,11 +1080,11 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=7",
-              "$$hashKey": "object:23926"
+              "$$hashKey": "object:1269"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=8",
-              "$$hashKey": "object:23927"
+              "$$hashKey": "object:1270"
             }
           ],
           "interpreterSettingId": "spark"
@@ -1054,7 +1097,7 @@
       "dateStarted": "2026-01-27T21:16:21+0000",
       "dateFinished": "2026-01-27T21:16:25+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18904"
+      "$$hashKey": "object:220"
     },
     {
       "text": "%md\n\n# Find the highest GDP for each country\n\n- Re-write the hive query (left cell) using PySpark df\n",
@@ -1096,7 +1139,7 @@
       "id": "20200925-000950_546215538",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18905"
+      "$$hashKey": "object:221"
     },
     {
       "text": "%sql\n\nSELECT wdi_csv_parquet.indicatorvalue AS value, \n       wdi_csv_parquet.year           AS year, \n       wdi_csv_parquet.countryname    AS country \nFROM   (SELECT Max(indicatorvalue) AS ind, \n               countryname \n        FROM   wdi_csv_parquet \n        WHERE  indicatorcode = 'NY.GDP.MKTP.KD.ZG' \n               AND indicatorvalue <> 0 \n        GROUP  BY countryname) t1 \n       INNER JOIN wdi_csv_parquet \n               ON t1.ind = wdi_csv_parquet.indicatorvalue \n                  AND t1.countryname = wdi_csv_parquet.countryname\n",
@@ -1248,7 +1291,7 @@
       "id": "20200925-001035_102671005",
       "dateCreated": "2026-01-27T20:24:24+0000",
       "status": "READY",
-      "$$hashKey": "object:18906"
+      "$$hashKey": "object:222"
     },
     {
       "text": "%spark.pyspark\n\nfrom pyspark.sql.functions import col, max as spark_max\n\n# Base table\nwdi_df = spark.table(\"wdi_csv_parquet\")\n\n# Subquery: max indicatorvalue per country\nmax_gdp_df = (\n    wdi_df\n    .filter(\n        (col(\"indicatorCode\") == \"NY.GDP.MKTP.KD.ZG\") &\n        (col(\"indicatorValue\") != 0)\n    )\n    .groupBy(\"countryName\")\n    .agg(spark_max(\"indicatorValue\").alias(\"ind\"))\n)\n\n# Join back to original table\nresult_df = (\n    max_gdp_df.alias(\"t1\")\n    .join(\n        wdi_df.alias(\"w\"),\n        (col(\"t1.ind\") == col(\"w.indicatorValue\")) &\n        (col(\"t1.countryName\") == col(\"w.countryName\")),\n        \"inner\"\n    )\n    .select(\n        col(\"w.indicatorValue\").alias(\"value\"),\n        col(\"w.year\").alias(\"year\"),\n        col(\"w.countryName\").alias(\"country\")\n    )\n)\n\n# Show result\nz.show(result_df)\n",
@@ -1397,23 +1440,23 @@
           "values": [
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=9",
-              "$$hashKey": "object:19600"
+              "$$hashKey": "object:1400"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=10",
-              "$$hashKey": "object:19601"
+              "$$hashKey": "object:1401"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=11",
-              "$$hashKey": "object:19602"
+              "$$hashKey": "object:1402"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=12",
-              "$$hashKey": "object:19603"
+              "$$hashKey": "object:1403"
             },
             {
               "jobUrl": "http://jarvis-cluster-m.us-central1-a.c.project-0fc06317-cf69-4b88-bfc.internal:38815/jobs/job?id=13",
-              "$$hashKey": "object:19604"
+              "$$hashKey": "object:1404"
             }
           ],
           "interpreterSettingId": "spark"
@@ -1426,7 +1469,7 @@
       "dateStarted": "2026-01-27T21:19:04+0000",
       "dateFinished": "2026-01-27T21:19:23+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:18907"
+      "$$hashKey": "object:223"
     }
   ],
   "name": "Spark Dataframe - WDI Data Analytics",
