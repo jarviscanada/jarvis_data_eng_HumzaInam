@@ -1,5 +1,6 @@
-# Preferred name (Characters only)
+# Preferred name (Characters only) 
 name: "Humza Inam"
+
 # Your GitHub repo root URL
 github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_HumzaInam
 
@@ -68,18 +69,25 @@ jarvis_projects:
 # Feel free to add more projects
 # Please read the project description guideline carefully. Make sure you follow the simplified SDLC pattern. (t.ly/NlXQ)
 highlighted_projects:
+  #project name
+  - name: "AML RAG Agent (AWS Bedrock + Lambda + Knowledge Base)"
+    git_url: "https://github.com/Humza987/AWSBedrock_LangChain"
+    description: Built a serverless Anti-Money Laundering (AML) assistant using AWS Bedrock foundation models, AWS Knowledge Bases for Retrieval-Augmented Generation (RAG), LangChain/LangGraph agents, and AWS Lambda (containerized via SAM). Implemented tool-based workflows for transaction risk scoring, simulated sanctions checks, document retrieval from S3, and structured compliance report generation, exposed through API Gateway with an optional Streamlit UI. Designed the system to ground model responses in indexed compliance documents. Developed as a hands-on learning project to explore LLM agents, RAG architecture.
+
   - name: "Mindryx - AI Quiz Generation Study Platform"
     git_url: "https://github.com/Humza987/Mindryx"
     description: Available at https://mindryxify.vercel.app/ - Built a full-stack serverless quiz platform with AI-generated quizzes from topics or PDFs using Gemini API. Developed with Next.js frontend and Supabase backend featuring PostgreSQL database, Edge Functions for serverless compute, and Clerk authentication. Implemented LocalStack for local development to emulate AWS Lambda, DynamoDB, and SQS, then migrated to production using Supabase Edge Functions for data processing workflows. Integrated Stripe payment gateway for subscription management and implemented PDF OCR using Tesseract.js for document processing. Deployed CI/CD pipeline via Vercel with automated testing and privacy-focused in-browser WebLLM chat functionality. Designed scalable database schema and RESTful APIs to handle user data, quiz generation, and analytics tracking.
-    #project name
+
   - name: "IoT Real-time Azure Streaming Pipeline"
     #URL is optional
     git_url: "https://github.com/Humza987/Azure_IoT_Realtime_Data_Pipeline"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Engineered a real-time IoT data pipeline with machine learning anomaly detection, streaming telemetry from Azure IoT Central through Event Hub and Stream Analytics into Azure SQL Database and Azure Data Lake Storage. Processed 8000+ device telemetry points with sub-second latency using Event Hub ingestion and real-time data enrichment. Developed Azure Functions with timer triggers to incrementally fetch SQL telemetry data and push to Power BI API for visualization dashboards. Integrated .NET 8.0 Azure Functions for serverless compute and automated data transformation workflows. Demonstrated end-to-end ETL pipeline architecture with cloud-native services for IoT data processing, storage, and business intelligence reporting.
+
   - name: "Azure Networking Environment"
     git_url: "https://github.com/Humza987/Azure_Networking"
     description: Engineered a secure Azure cloud networking environment using Terraform Infrastructure as Code, provisioning VNets, subnets, NAT Gateway, Private Endpoints, VNet peering, and Application Gateway for load-balanced multi-tier connectivity. Automated deployment of Spring Boot applications on private VMs using IaC best practices, eliminating manual configuration errors. Validated DNS resolution, private storage access, and cross-VNet communication via REST APIs to ensure secure data flow. Demonstrated enterprise-grade cloud architecture patterns including network isolation, traffic routing, and security boundaries. Implemented declarative infrastructure management enabling version-controlled, reproducible deployments across multiple environments.
+
   - name: "SafeScript - VS Code Extension Capstone Project"
     git_url: "https://github.com/farestrad/LLM-Assisted-Secure-Coding"
     description: Led UI development for an award-winning VS Code extension using Abstract Syntax Tree (AST) static analysis to detect buffer overflows and critical C vulnerabilities with optimized real-time analysis under 3 seconds. Designed Security Analysis panels, AI Suggestion History interface, and integrated Code Llama for automated code generation and vulnerability remediation. Developed static analysis rules with CWE/CVE mapping for industry-standard security classifications and comprehensive Jest unit tests for quality assurance. Managed Agile development sprints via Jira with iterative feature delivery and stakeholder feedback integration.

@@ -14,6 +14,11 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_HumzaInam",
   "highlighted_projects": [
     {
+      "description": "Built a serverless Anti-Money Laundering (AML) assistant using AWS Bedrock foundation models, AWS Knowledge Bases for Retrieval-Augmented Generation (RAG), LangChain/LangGraph agents, and AWS Lambda (containerized via SAM). Implemented tool-based workflows for transaction risk scoring, simulated sanctions checks, document retrieval from S3, and structured compliance report generation, exposed through API Gateway with an optional Streamlit UI. Designed the system to ground model responses in indexed compliance documents. Developed as a hands-on learning project to explore LLM agents, RAG architecture.",
+      "git_url": "https://github.com/Humza987/AWSBedrock_LangChain",
+      "name": "AML RAG Agent (AWS Bedrock + Lambda + Knowledge Base)"
+    },
+    {
       "description": "Available at https://mindryxify.vercel.app/ - Built a full-stack serverless quiz platform with AI-generated quizzes from topics or PDFs using Gemini API. Developed with Next.js frontend and Supabase backend featuring PostgreSQL database, Edge Functions for serverless compute, and Clerk authentication. Implemented LocalStack for local development to emulate AWS Lambda, DynamoDB, and SQS, then migrated to production using Supabase Edge Functions for data processing workflows. Integrated Stripe payment gateway for subscription management and implemented PDF OCR using Tesseract.js for document processing. Deployed CI/CD pipeline via Vercel with automated testing and privacy-focused in-browser WebLLM chat functionality. Designed scalable database schema and RESTful APIs to handle user data, quiz generation, and analytics tracking.",
       "git_url": "https://github.com/Humza987/Mindryx",
       "name": "Mindryx - AI Quiz Generation Study Platform"
