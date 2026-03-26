@@ -1,0 +1,65 @@
+pipeline {
+    agent {
+        kubernetes {
+            label 'jenkins-agent'
+            defaultContainer 'tools' // Set 'tools' as default so you don't have to wrap every step
+            yaml """
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: tools
+    image: 872979777793.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent:latest
+    command: ['cat']
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+    - name: project-source
+      mountPath: /home/jenkins/agent/workspace
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+  - name: project-source
+    hostPath:
+      path: your_project_source_path_here
+  imagePullSecrets:
+  - name: ecr-secret
+"""
+        }
+    }
+
+    stages {
+        stage('Build Artifact') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Docker Build & Push') {
+            steps {
+                sh '''
+                    # Login to ECR
+                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 872979777793.dkr.ecr.us-east-1.amazonaws.com
+                    
+                    # Build using the Dockerfile in the mounted workspace
+                    docker build -t 872979777793.dkr.ecr.us-east-1.amazonaws.com/springboot-demo-app:latest .
+                    
+                    # Push to ECR
+                    docker push 872979777793.dkr.ecr.us-east-1.amazonaws.com/springboot-demo-app:latest
+                '''
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh '''
+                    kubectl apply -f deployment-dev.yaml
+                    # Force a restart to ensure the new 'latest' image is pulled
+                    kubectl rollout restart deployment/springboot-demo-app-dev
+                '''
+            }
+        }
+    }
+}
