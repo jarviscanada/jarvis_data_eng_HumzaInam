@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trading-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: trading-app
+  template:
+    metadata:
+      labels:
+        app: trading-app
+    spec:
+      containers:
+        - name: trading-app
+          image: 872979777793.dkr.ecr.us-east-1.amazonaws.com/trading-app:latest
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "256Mi"
+              cpu: "300m"
+          env:
+            - name: PSQL_URL
+              value: "jdbc:postgresql://trading-psql-dev:5432/jrvstrading"
+            - name: PSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: user
+            - name: PSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: password
+            - name: FINNHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: finnhub-token
+            - name: FINAGE_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: finage-token
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trading-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: trading-app
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000

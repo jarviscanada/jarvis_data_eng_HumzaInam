@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: trading-psql-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ebs-sc
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trading-psql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trading-psql
+  template:
+    metadata:
+      labels:
+        app: trading-psql
+    spec:
+      containers:
+        - name: trading-psql
+          image: 872979777793.dkr.ecr.us-east-1.amazonaws.com/trading-psql:latest
+          ports:
+            - containerPort: 5432
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "256Mi"
+              cpu: "300m"
+          env:
+            - name: POSTGRES_DB
+              value: "jrvstrading"
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: trading-app
+                  key: password
+          volumeMounts:
+            - name: psql-data
+              mountPath: /var/lib/postgresql/data
+              subPath: postgres         
+      volumes:
+        - name: psql-data
+          persistentVolumeClaim:
+            claimName: trading-psql-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trading-psql-dev
+spec:
+  selector:
+    app: trading-psql
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
