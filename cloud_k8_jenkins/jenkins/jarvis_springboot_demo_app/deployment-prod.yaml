@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-demo-app-prod
+spec:
+  selector:
+    app: springboot-demo-app
+  ports:
+  - port: 80
+    targetPort: 8082
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-demo-app-prod
+spec:
+  selector:
+    matchLabels:
+      app: springboot-demo-app
+  template:
+    metadata:
+      labels:
+        app: springboot-demo-app
+    spec:
+      containers:
+      - name: springboot-demo-app
+        image: jrvs/springboot_demo_app:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        env:
+        - name: spring_profiles_active
+          value: "prod"
+        ports:
+        - containerPort: 8082
