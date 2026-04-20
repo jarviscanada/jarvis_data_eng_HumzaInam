@@ -42,7 +42,7 @@
   "jarvis_projects": [
     {
       "description": "Built an end-to-end machine learning credit risk scoring system using Python, Pandas, NumPy, and Scikit-learn. Performed extensive exploratory data analysis (EDA), missing data analysis, and feature engineering on the Home Credit dataset. Engineered predictive features including aggregated bureau-level credit history signals. Trained and evaluated multiple models including Logistic Regression, Random Forest, XGBoost, and LightGBM using AUC, Gini, KS, and AUPRC metrics. Applied class imbalance handling using scale_pos_weight and class_weight techniques. Identified XGBoost as the best-performing model and optimized decision thresholds for credit default prediction.",
-      "git_url": "/credit-risk-scoring-ml",
+      "git_url": "/credit_risk_scoring_ml",
       "name": "Home Credit Default Scoring Risk ML"
     },
     {
