@@ -8,12 +8,14 @@ Computer Engineering graduate with hands-on experience in data engineering, anal
 
 **Competent:** Pandas/NumPy/Jupyter Notebook, Databricks, PySpark, AWS (Lambda, Bedrock, API Gateway, S3, DynamoDB), Azure (Event Hub, Stream Analytics, Functions, SQL, ADLS, Blob Storage), ETL/Data Pipelines, Delta Lake, REST APIs, JavaScript/TypeScript, React.js/Next.js/Angular, Express.js/.NET, MongoDB/Supabase/Firebase
 
-**Familiar:** Terraform/IaC, C/C#, Power BI, Jest/Jasmine/Unit Testing, CI/CD (Vercel), Microservices Architecture, HTML/CSS/TailwindCSS
+**Familiar:** Terraform/IaC, C/C#, Power BI, Jest/Jasmine/Unit Testing, CI/CD (Vercel), Microservices Architecture, HTML/CSS/TailwindCSS, Scikit-learn
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_HumzaInam](https://github.com/jarviscanada/jarvis_data_eng_HumzaInam)
 
+
+**Home Credit Default Scoring Risk ML** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/master/credit-risk-scoring-ml)]: Built an end-to-end machine learning credit risk scoring system using Python, Pandas, NumPy, and Scikit-learn. Performed extensive exploratory data analysis (EDA), missing data analysis, and feature engineering on the Home Credit dataset. Engineered predictive features including aggregated bureau-level credit history signals. Trained and evaluated multiple models including Logistic Regression, Random Forest, XGBoost, and LightGBM using AUC, Gini, KS, and AUPRC metrics. Applied class imbalance handling using scale_pos_weight and class_weight techniques. Identified XGBoost as the best-performing model and optimized decision thresholds for credit default prediction.
 
 **London Gift Shop Customer Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_HumzaInam/tree/master/python_data_analytics)]: Developed a customer analytics proof-of-concept for a UK-based e-commerce retailer using Python, Jupyter Notebook, Pandas, and NumPy to analyze transactional retail data and customer purchasing behavior. Performed data cleaning, validation, and feature engineering to transform raw invoice-level data into customer-level insights. Implemented RFM (Recency, Frequency, Monetary) analysis and customer segmentation to identify high-value, loyal, and at-risk customers. Generated monthly user activity metrics and business-ready summaries to support targeted marketing campaigns and customer retention strategies for the LGS marketing team.
 
